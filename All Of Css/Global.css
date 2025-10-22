@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Noto sans Thai';
+    src: url(/Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url(/Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Noto Sans Thai';
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white;
+    color: black;
+}
+
+.Container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /*rem คือหน่วยที่บอกเป็นเท่าๆอ่ะไม่ใช่แบบpx ที่fixed มาเลย*/
+    padding-right: 1rem;
+}

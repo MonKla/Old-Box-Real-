@@ -1,0 +1,85 @@
+.Navbar {
+    border-bottom: 1px solid #eee; /*เส้นคั่นด้านล่าง*/
+    background-color: whitesmoke; 
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    /*อยู่บนสุด ฮ่าฮ๋า*/
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.Navbar .Container {
+    display: flex;
+    justify-content: space-between; /*ทำให้ของมันกระจายอ่ะ ;-;*/
+    align-items: center; /*ทำให้อยู่ตรงกลาง*/
+    height: 100%;
+}
+
+
+.Logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    text-decoration: none; /*เอา่ขีดเส้นใต้ออก เย่😭*/
+}
+
+
+.Com-Menu {
+    display: none;
+    gap: 1.5rem;
+}
+.Com-Menu a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    transition: color 0.2 ease;
+}
+.Com-Menu a:hover {
+    color: #000;
+}
+
+
+.Icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.Nav-Icons {
+    width: 24px;
+    height: 24px;
+    fill: #555;
+    cursor: pointer;
+    display: block; /*ทำให้ตัวที่อยู่บรรทัดเดียวกันเป็นกล่อง*/
+    transition: fill 0.2s ease;
+}
+.Nav-Icons:hover {
+    fill: #000;
+}
+
+
+.Mobile-Menu-Button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+}
+
+
+@media (min-width: 768px) {
+    .Mobile-Menu-Button {
+        display: none;
+    }
+
+    .Com-Menu {
+        display: flex;
+    }
+
+    .User-Icons {
+        display: block;
+    }
+}
