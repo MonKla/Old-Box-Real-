@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Noto sans Thai';
-    src: url(/Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
+    src: url(../Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Noto Sans Thai';
-    src: url(/Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
+    src: url(../Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: white;
+    background-color: rgb(235, 235, 235);
     color: black;
 }
 

@@ -1,6 +1,6 @@
 .Navbar {
     border-bottom: 1px solid #eee; /*เส้นคั่นด้านล่าง*/
-    background-color: whitesmoke; 
+    background-color: rgb(255, 83, 83); 
     height: 80px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     /*อยู่บนสุด ฮ่าฮ๋า*/
@@ -10,7 +10,6 @@
 }
 .Navbar .Container {
     display: flex;
-    justify-content: space-between; /*ทำให้ของมันกระจายอ่ะ ;-;*/
     align-items: center; /*ทำให้อยู่ตรงกลาง*/
     height: 100%;
 }
@@ -20,18 +19,20 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
-    color: #333;
+    color: #000000;
     text-decoration: none; /*เอา่ขีดเส้นใต้ออก เย่😭*/
 }
 
 
 .Com-Menu {
     display: none;
-    gap: 1.5rem;
+    flex-grow: 1;
+    text-align: center;
 }
 .Com-Menu a {
+    margin: 0 0.75rem;
     text-decoration: none;
-    color: #555;
+    color: #000000;
     font-size: 0.9rem;
     transition: color 0.2 ease;
 }
@@ -41,9 +42,11 @@
 
 
 .Icons {
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-shrink: 0;
 }
 .Nav-Icons {
     width: 24px;
@@ -76,7 +79,7 @@
     }
 
     .Com-Menu {
-        display: flex;
+        display: block;
     }
 
     .User-Icons {
