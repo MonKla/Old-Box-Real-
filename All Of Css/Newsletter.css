@@ -1,0 +1,81 @@
+.NewsLetter {
+    background-color: #79c7c5;
+    padding: 3rem 0;
+    text-align: center;
+}
+.NewsLetter h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+
+.NewsLetterForm {
+    display: flex;
+    max-width: 450px;
+    margin: 0 auto 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.NewsLetterForm input[type="email"] {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+    border: none;
+    outline: none;
+}
+.newsletter-form button {
+    padding: 0.8rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+.newsletter-form button:hover {
+    background-color: #555;
+}
+.newsletter-form .arrow-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.sr-only { 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+.terms {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.terms input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: #333;
+}
+.terms label {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+
+@media (max-width: 767px) {
+    .newsletter h2 {
+        font-size: 1.4rem;
+    }
+}

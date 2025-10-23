@@ -37,7 +37,7 @@
     transition: color 0.2 ease;
 }
 .Com-Menu a:hover {
-    color: #000;
+    fill: #000;
 }
 
 

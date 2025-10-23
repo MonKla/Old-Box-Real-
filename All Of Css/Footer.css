@@ -47,3 +47,26 @@
     font-size: 0.85rem;
     color: #555;
 }
+
+
+.SocialmediaIcons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+@media(min-width: 768px) {
+    .FooterGrid {
+        grid-template-columns: repeat(4,1fr);
+        gap: 1.5rem;
+    }
+    .FooterBottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .SocialmediaIcons {
+        margin-top: 0;
+    }
+}
