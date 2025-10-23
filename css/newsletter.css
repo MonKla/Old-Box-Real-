@@ -1,9 +1,9 @@
-.NewsLetter {
+.newsletter {
     background-color: #79c7c5;
     padding: 3rem 0;
     text-align: center;
 }
-.NewsLetter h2 {
+.newsletter h2 {
     font-size: 1.6rem;
     font-weight: bold;
     color: #fff;
@@ -11,7 +11,7 @@
 }
 
 
-.NewsLetterForm {
+.newsletterform {
     display: flex;
     max-width: 450px;
     margin: 0 auto 1rem;
@@ -19,14 +19,14 @@
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-.NewsLetterForm input[type="email"] {
+.newsletterform input[type="email"] {
     font-size: 0.9rem;
     flex-grow: 1;
     padding: 0.8rem 1rem;
     border: none;
     outline: none;
 }
-.newsletter-form button {
+.newsletterform button {
     padding: 0.8rem 1rem;
     background-color: #333;
     color: #fff;
@@ -36,10 +36,10 @@
     display: flex;
     align-items: center;
 }
-.newsletter-form button:hover {
+.newsletterform button:hover {
     background-color: #555;
 }
-.newsletter-form .arrow-icon {
+.newsletterform .arrow-icon {
     width: 20px;
     height: 20px;
 }

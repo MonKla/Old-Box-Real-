@@ -1,40 +1,40 @@
-.Footer {
+.footer {
     background-color: #f94949;
     padding: 3rem 0 1rem;
     color: #000000;
     margin-top: 2rem;
 }
-.FooterGrid {
+.footergrid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2rem;
     margin-bottom: 2rem;
 }
-.FooterGrid h3 {
+.footergrid h3 {
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
-.FooterGrid ul {
+.footergrid ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.FooterGrid li {
+.footergrid li {
     margin-bottom: 0.5rem;
 }
-.FooterGrid a {
+.footergrid a {
     text-decoration: none; /*เอาขีดเส้นใต้ออก*/
     color: #000000;
     font-size: 0.9rem;
     transition: color 0.2 ease;
 }
-.FooterGrid a:hover {
+.footergrid a:hover {
     color: black;
     text-decoration: underline;
 }
 
-.FooterBottom {
+.footerbottom {
     border-top: 1px solid rgba(0,0,0,0.1);
     padding-top: 1.5rem;
     display: flex;
@@ -42,14 +42,14 @@
     align-items: center;
     text-align: center;
 }
-.FooterBottom p {
+.footerbottom p {
     margin: 0;
     font-size: 0.85rem;
-    color: #555;
+    color: #000000;
 }
 
 
-.SocialmediaIcons {
+.socialmediaicons {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
@@ -57,16 +57,16 @@
 
 
 @media(min-width: 768px) {
-    .FooterGrid {
+    .footergrid {
         grid-template-columns: repeat(4,1fr);
         gap: 1.5rem;
     }
-    .FooterBottom {
+    .footerbottom {
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
     }
-    .SocialmediaIcons {
+    .socialmediaicons {
         margin-top: 0;
     }
 }

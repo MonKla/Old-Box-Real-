@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
     border-bottom: 1px solid #eee; /*เส้นคั่นด้านล่าง*/
     background-color: rgb(255, 83, 83); 
     height: 80px;
@@ -8,14 +8,14 @@
     top: 0;
     z-index: 10;
 }
-.Navbar .Container {
+.navbar .container {
     display: flex;
     align-items: center; /*ทำให้อยู่ตรงกลาง*/
     height: 100%;
 }
 
 
-.Logo {
+.logo {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
@@ -24,31 +24,31 @@
 }
 
 
-.Com-Menu {
+.com-menu {
     display: none;
     flex-grow: 1;
     text-align: center;
 }
-.Com-Menu a {
+.com-menu a {
     margin: 0 0.75rem;
     text-decoration: none;
     color: #000000;
     font-size: 0.9rem;
     transition: color 0.2 ease;
 }
-.Com-Menu a:hover {
+.com-menu a:hover {
     fill: #000;
 }
 
 
-.Icons {
+.icons {
     margin-left: auto;
     display: flex;
     align-items: center;
     gap: 0.75rem;
     flex-shrink: 0;
 }
-.Nav-Icons {
+.nav-icons {
     width: 24px;
     height: 24px;
     fill: #555;
@@ -56,12 +56,12 @@
     display: block; /*ทำให้ตัวที่อยู่บรรทัดเดียวกันเป็นกล่อง*/
     transition: fill 0.2s ease;
 }
-.Nav-Icons:hover {
+.nav-icons:hover {
     fill: #000;
 }
 
 
-.Mobile-Menu-Button {
+.mobile-menu-button {
     display: block;
     background: none;
     border: none;
@@ -74,15 +74,15 @@
 
 
 @media (min-width: 768px) {
-    .Mobile-Menu-Button {
+    .mobile-menu-button {
         display: none;
     }
 
-    .Com-Menu {
+    .com-menu {
         display: block;
     }
 
-    .User-Icons {
+    .user-icons {
         display: block;
     }
 }
