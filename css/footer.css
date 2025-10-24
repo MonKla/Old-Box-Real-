@@ -1,20 +1,17 @@
-/* css/footer.css */
-
 .footer {
-    background-color: #f9d749; /* สีเหลือง */
-    padding: 2rem 0 1rem; /* ปรับ padding บนลง */
+    background-color: #f9d749;
+    padding: 2rem 0 1rem;
     color: #000000;           
 }
 
 .footer-grid {
     display: grid;
-    /* จอเล็ก: Newsletter (เต็ม) อยู่บน, Links (2 คอลัมน์) อยู่ล่าง */
     grid-template-columns: 1fr; 
     gap: 2rem;                   
     margin-bottom: 2rem;         
 }
 
-/* จัดสไตล์คอลัมน์ Newsletter ชิดซ้าย */
+
 .footer-newsletter {
     text-align: left; 
 }
@@ -36,12 +33,10 @@
 }
 
 .footer-grid a {
-    /* สไตล์จาก global.css */
     font-size: 0.9rem;
 }
 
 .footer-grid a:hover {
-     /* สไตล์จาก global.css */
     text-decoration: underline; 
 }
 
@@ -82,12 +77,11 @@
     fill: #000;          
 }
 
-/* --- Responsive Styles --- */
+/* --- Responsive --- */
 @media (min-width: 768px) {
     .footer-grid {
-        /* จอใหญ่: Newsletter ซ้าย (2 ส่วน), Links ขวา (1 ส่วน + 1 ส่วน) */
         grid-template-columns: 2fr 1fr 1fr; 
-        gap: 2.5rem; /* เพิ่ม gap ในจอใหญ่ */
+        gap: 2.5rem;
     }
 
     .footer-bottom {

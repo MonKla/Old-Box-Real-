@@ -1,21 +1,17 @@
-/* css/newsletter.css */
-
-/* สไตล์ h2 ใน Newsletter (เมื่ออยู่ใน Footer) */
 .footer-newsletter h2 { 
     font-size: 1.3rem; 
     font-weight: bold;
-    color: #333; 
+    color: #000000; 
     margin-bottom: 1rem;
     text-align: left; 
 }
 
 .newsletter-form {
     display: flex;            
-    max-width: 100%; /* กว้างเต็มคอลัมน์ */         
+    max-width: 100%;       
     margin: 0 0 1rem;          
     border-radius: 6px;       
     overflow: hidden;         
-    /* box-shadow: none; */ /* เอาเงาออกก็ได้ */
 }
 
 .newsletter-form input[type="email"] {
@@ -49,7 +45,7 @@
     height: 20px;
 }
 
-/* ซ่อน label ที่มี class sr-only (ดีต่อ Accessibility) */
+
 .sr-only { 
     position: absolute;
     width: 1px;
@@ -65,17 +61,17 @@
 .terms {
     margin-top: 0.5rem;     
     display: flex;        
-    justify-content: flex-start; /* ชิดซ้าย */
+    justify-content: flex-start;
     align-items: center;
     text-align: left; 
 }
 
 .terms input[type="checkbox"] {
     margin-right: 0.5rem; 
-    accent-color: #333;   
+    accent-color: #000000;   
 }
 
 .terms label {
     font-size: 0.8rem;
-    color: #555;         
+    color: #000000;         
 }

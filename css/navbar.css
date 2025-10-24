@@ -1,8 +1,6 @@
-/* css/navbar.css */
-
 .navbar {
-    border-bottom: 1px solid #eee; 
-    background-color: #fff;       
+    border-bottom: 1px solid #000000; 
+    background-color: #f9d749;       
     height: 80px;                 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
     position: sticky;             
@@ -12,7 +10,7 @@
 
 .navbar .container {
     display: flex;
-    align-items: center; /* จัดทุกอย่างกึ่งกลางแนวตั้ง */
+    align-items: center;
     height: 100%;
 }
 
@@ -20,15 +18,16 @@
     font-size: 1.5rem;   
     font-weight: bold;   
     margin: 0;           
-    color: #333;        
+    color: #000000;        
     text-decoration: none; 
-    flex-shrink: 0; /* ไม่ให้โลโก้หดตัว */
+    flex-shrink: 0;
+    margin-left: 1rem;
 }
 
 .desktop-menu {
-    display: none; /* ซ่อนในมือถือ */
-    flex-grow: 1; /* ทำให้เมนูยืดเต็มพื้นที่ตรงกลาง */
-    text-align: center; /* จัดข้อความลิงก์ให้อยู่ตรงกลาง */
+    display: none;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .desktop-menu a {
@@ -36,7 +35,7 @@
     color: #000000;                 
     font-size: 0.9rem;          
     transition: color 0.2s ease; 
-    margin: 0 0.75rem; /* ใช้ margin ซ้ายขวาแทน gap */
+    margin: 0 0.75rem;
 }
 
 .desktop-menu a:hover {
@@ -47,8 +46,8 @@
     display: flex;        
     align-items: center;  
     gap: 0.75rem;       
-    margin-left: auto; /* ดันไอคอนไปทางขวาสุด */
-    flex-shrink: 0; /* ไม่ให้ไอคอนหดตัว */
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .nav-icon {
@@ -64,34 +63,33 @@
     fill: #000;           
 }
 
-/* .user-icon { */
-    /* display: none; ถ้าอยากซ่อนในมือถือ ให้เปิดอันนี้ */
-/* } */
 
 .mobile-menu-button {
-    display: block; /* แสดงในมือถือ */
+    display: block;
     background: none;
     border: none;
     font-size: 1.8rem; 
-    color: #333;     
+    color: #000000;     
     cursor: pointer;
     padding: 0.5rem; 
-    margin-left: 1rem; /* เพิ่มระยะห่างจาก icons เล็กน้อยใน mobile */
-    order: 3; /* (Optional) ทำให้ปุ่ม Hamburger อยู่ขวาสุดเสมอใน flex container */
 }
 
 
-/* --- Responsive Styles --- */
+/* --- Responsive --- */
 @media (min-width: 768px) {
     .mobile-menu-button {
         display: none;
     }
 
+    .logo {
+        margin-left: 0;
+    }
+
     .desktop-menu {
-        display: block; /* แสดงเมนูคอม */
+        display: block;
     }
 
     .user-icon {
-         display: block; /* แสดงไอคอน User ใน Desktop */
+         display: block;
     }
 }
