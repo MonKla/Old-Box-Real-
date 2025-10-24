@@ -1,10 +1,7 @@
-// script.js
 console.log('--- Script started ---');
 
-// --- 1. หา Element ที่เป็นคอนเทนเนอร์หลักสำหรับแสดงผลสินค้า ---
-// ใช้ document.getElementById() เพื่อหา <div id="product-list-container"> ใน HTML
-const productListContainer = document.getElementById('product-list-container');
-// หา <span> ที่จะใช้อัปเดตจำนวนสินค้า
+const productListContainer = document.getElementById('product-list-container'); //หาidในhtml
+
 const itemCountSpan = document.getElementById('item-count');
 
 console.log('Container element:', productListContainer); // เช็คว่าหา container เจอไหม
@@ -97,19 +94,15 @@ fetch('https://fakestoreapi.com/products')
     });
     console.log('--- Finished processing products ---');
   })
+  
   .catch(error => {
-    // --- 8. จัดการกรณีเกิดข้อผิดพลาด ---
     console.error('!!! Error during fetch or processing:', error);
-
-    // แสดงข้อความ Error ให้ผู้ใช้เห็นบนหน้าเว็บ
-    if (productListContainer) { // เช็คก่อนว่าหา container เจอ
-        productListContainer.innerHTML = `<p style="color: red; text-align: center;">ขออภัย ไม่สามารถโหลดข้อมูลสินค้าได้ (${error.message})</p>`;
+    if (productListContainer) {
+        productListContainer.innerHTML = `<p style="color: red; text-align: center;">ขอโ?ษด้วยนะคะ รูปมันไม่โหลด😭 (${error.message})</p>`;
     }
-    // อัปเดตจำนวนเป็น 0 ถ้าเกิด Error
     if (itemCountSpan) {
         itemCountSpan.textContent = '0';
     }
   });
 
 console.log('--- Script finished executing initial code ---');
-// --- จบโค้ด ---

@@ -1,107 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OldBox</title> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Box</title> 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/product-list.css">
     <link rel="stylesheet" href="css/newsletter.css">
     <link rel="stylesheet" href="css/footer.css">
-    <style>
-        #product-list-container {
-            border: 5px solid red !important; 
-            min-height: 200px;
-            width: 100%; /* ลองบังคับให้มีความกว้าง */
-            display: block !important; /* บังคับให้แสดง */
-            visibility: visible !important; /* บังคับให้มองเห็น */
-            opacity: 1 !important; /* บังคับให้ทึบแสง */
-        }
-        .product-card {
-             border: 3px solid blue !important; 
-             color: black !important; 
-             background-color: lightyellow !important; 
-             padding: 10px;
-             margin-bottom: 10px;
-             width: 45%; /* ลองกำหนดความกว้างให้การ์ด */
-             display: inline-block; /* ลองเปลี่ยน display mode */
-             vertical-align: top; /* ช่วยจัดเรียง */
-        }
-         .product-image {
-             width: 50px !important;
-             height: 50px !important;
-             border: 1px solid green;
-             display: block !important; /* บังคับให้แสดง */
-             visibility: visible !important;
-             opacity: 1 !important;
-         }
-         .product-title {
-            color: purple !important;
-         }
-         /* ลองบังคับให้ทุกอย่างมองเห็น */
-         * {
-            /* visibility: visible !important; */ /* ระวังอันนี้ อาจจะทำให้รก */
-         }
-    </style>
 </head>
-
 <body>
+
     <header class="navbar">
         <div class="container">
-            <h1 class="logo">OldBox</h1>
-<!--ไอ้ 4 คำข้างบน-->
-            <nav class="com-menu">
+            <h1 class="logo">Old Box</h1> 
+
+            <nav class="desktop-menu">
                 <a href="">Collection</a>
                 <a href="">New In</a>
-                <a href="">About us</a>
+                <a href="">About Us</a>
                 <a href="">Sustainability</a>
             </nav>
-<!--Icon 3 อันมุมบนขวา-->
-                <div class="icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icons User-Icon">
-                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icons Heart-Icon">
-                        <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icons Cart-Icon">
-                        <path d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
-                    </svg>
-                </div>
-<!--อันนี้เอาไว้ทำให้ในมือถือใช้ได้ไม่เอ๋อ👍-->
-            <div>
-                <button class="mobile-menu-button">☰</button>
+
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icon user-icon"> 
+                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icon heart-icon">
+                  <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="nav-icon cart-icon">
+                  <path d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+                </svg>
             </div>
+
+            <button class="mobile-menu-button">☰</button> 
         </div>
     </header>
 
     <main class="page-content container">
-        <h2>Browse Product</h2>
-        <p><span id="item-count">0</span>Items</p>
-        <div id="product-list-container" class="productGrid">
-            <p>กำลังโหลดนะคะรอนิดนึง🥹...</p>
+        <h2>Browse Products</h2>
+        <p><span id="item-count">0</span> Items</p>
+
+        <div id="product-list-container" class="product-grid">
+            <p>รอโหลดแปปนึงนะคะ...</p> 
         </div>
     </main>
-    
-    <section class="newsletter">
-        <div class="container">
-            <h2>Join Our Club, Get67% off For Your BirthDay </h2>
-            <form class="newsletterform">
-                <label for="EmailNewsletter" class="sr-only">Email :</label>
-                <input type="email" id="EmailNewsletter" placeholder="ต้องใส่เป็นEmail นะคะ😇" required>
-                <button type="submit" aria-label="Submit Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="arrow-icon">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                </button>
-            </form>
-        </div>
-    </section>
-    
+
     <footer class="footer">
-        <div class="container footergrid">
-           <div>
+        <div class="container footer-grid">
+            
+            <div class="footer-newsletter"> 
+                <h2>Join Our Club, Get 67% Off For Your Birthday</h2>
+                
+                <form class="newsletter-form">
+                    <label for="email-newsletter" class="sr-only">Email address</label> 
+                    <input type="email" id="email-newsletter" placeholder="ใส่เป็นMailนะPls😭🙏" required>
+                    <button type="submit" aria-label="Submit email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="arrow-icon">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="terms">
+                    <input type="checkbox" id="newsletter-terms">
+                    <label for="newsletter-terms">เพียงแค่กดปุ่มนี้เพื่อรับการป้ายยาสุดโหดดดดดด</label>
+                </div>
+            </div>
+
+            <div> 
+                <h3>Help & Support</h3>
+                <ul>
+                    <li><a href="">Orders & Shipping</a></li>
+                    <li><a href="">Returns & Refunds</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div> 
                 <h3>Join Up</h3>
                 <ul>
                     <li><a href="">Modimal Club</a></li>
@@ -109,27 +88,36 @@
                     <li><a href="">Visit Us</a></li>
                 </ul>
             </div>
-            <div>
-                <h3>Help ∧ Support</h3>
-                <ul>
-                    <li><a href="">Order ∧ Shipiping</a></li>
-                    <li><a href="">Return ∧ Refund</a></li>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Contract Us</a></li>
-                </ul>
-            </div> 
+            
         </div>
-        <div class="container footerbottom">
-            <p>©2025 Old Box. All Rights Reserved</p>
-            <div class="socialmediaicons">
-                <a href="https://www.instagram.com/mon_24123/" class="socialLink" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Ig" width="30px"></a>
-                <a href="https://www.facebook.com/mon.kla.841001" class="socialLink" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/500px-Facebook_Logo_%282019%29.png" alt="FB" width="30px"></a>
-                <a href="https://www.tiktok.com/@mon_24123" class="socialLink" target="_blank"><img src="./Pic/TikTokLogo.png" alt="TT" width="30px"></a>
-                <a href="https://x.com/MonKlalnwza007" class="socialLink" target="_blank"><img src="https://www.freepnglogos.com/uploads/twitter-x-logo-png/twitter-x-logo-png-9.png" alt="X" width="30px"></a>
+
+        <div class="container footer-bottom">
+            <p>© 2025 Old Box. All Rights Reserved.</p>
+             <div class="social-icons">
+                <a href="https://www.facebook.com/mon.kla.841001" class="social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" class="social-icon">
+                    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                  </svg>
+                </a>
+                 <a href="https://www.instagram.com/mon_24123/" class="social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" class="social-icon">
+                    <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+                  </svg>
+                </a>
+                <a href="https://www.tiktok.com/@mon_24123" class="social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" class="social-icon">
+                    <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
+                  </svg>
+                </a>
+                 <a href="https://x.com/MonKlalnwza007" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </footer>
 
-    <script> src="./script.js"</script>
+    <script src="script.js"></script>
 </body>
 </html>

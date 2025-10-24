@@ -1,72 +1,102 @@
+/* css/footer.css */
+
 .footer {
-    background-color: #f94949;
-    padding: 3rem 0 1rem;
-    color: #000000;
-    margin-top: 2rem;
+    background-color: #f9d749; /* สีเหลือง */
+    padding: 2rem 0 1rem; /* ปรับ padding บนลง */
+    color: #000000;           
 }
-.footergrid {
+
+.footer-grid {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
+    /* จอเล็ก: Newsletter (เต็ม) อยู่บน, Links (2 คอลัมน์) อยู่ล่าง */
+    grid-template-columns: 1fr; 
+    gap: 2rem;                   
+    margin-bottom: 2rem;         
 }
-.footergrid h3 {
+
+/* จัดสไตล์คอลัมน์ Newsletter ชิดซ้าย */
+.footer-newsletter {
+    text-align: left; 
+}
+
+.footer-grid h3 {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
 }
-.footergrid ul {
-    list-style: none;
+
+.footer-grid ul {
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
-.footergrid li {
-    margin-bottom: 0.5rem;
-}
-.footergrid a {
-    text-decoration: none; /*เอาขีดเส้นใต้ออก*/
-    color: #000000;
-    font-size: 0.9rem;
-    transition: color 0.2 ease;
-}
-.footergrid a:hover {
-    color: black;
-    text-decoration: underline;
+
+.footer-grid li {
+    margin-bottom: 0.5rem; 
 }
 
-.footerbottom {
-    border-top: 1px solid rgba(0,0,0,0.1);
+.footer-grid a {
+    /* สไตล์จาก global.css */
+    font-size: 0.9rem;
+}
+
+.footer-grid a:hover {
+     /* สไตล์จาก global.css */
+    text-decoration: underline; 
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
     padding-top: 1.5rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
+    align-items: center;    
     text-align: center;
 }
-.footerbottom p {
+
+.footer-bottom p {
     margin: 0;
     font-size: 0.85rem;
-    color: #000000;
+    color: #000000; 
 }
 
-
-.socialmediaicons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+.social-icons {
+    display: flex;       
+    gap: 1rem;           
+    margin-top: 1rem;    
 }
 
+.social-link {
+    display: inline-block;
+    line-height: 0;
+}
 
-@media(min-width: 768px) {
-    .footergrid {
-        grid-template-columns: repeat(4,1fr);
-        gap: 1.5rem;
+.social-icon {
+    width: 24px;         
+    height: 24px;
+    fill: #000000;          
+    transition: fill 0.2s ease;
+}
+
+.social-icon:hover {
+    fill: #000;          
+}
+
+/* --- Responsive Styles --- */
+@media (min-width: 768px) {
+    .footer-grid {
+        /* จอใหญ่: Newsletter ซ้าย (2 ส่วน), Links ขวา (1 ส่วน + 1 ส่วน) */
+        grid-template-columns: 2fr 1fr 1fr; 
+        gap: 2.5rem; /* เพิ่ม gap ในจอใหญ่ */
     }
-    .footerbottom {
-        flex-direction: row;
-        justify-content: space-between;
+
+    .footer-bottom {
+        flex-direction: row;        
+        justify-content: space-between; 
         text-align: left;
     }
-    .socialmediaicons {
-        margin-top: 0;
+
+    .social-icons {
+        margin-top: 0;              
     }
 }

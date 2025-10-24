@@ -1,50 +1,55 @@
-.newsletter {
-    background-color: #79c7c5;
-    padding: 3rem 0;
-    text-align: center;
-}
-.newsletter h2 {
-    font-size: 1.6rem;
+/* css/newsletter.css */
+
+/* สไตล์ h2 ใน Newsletter (เมื่ออยู่ใน Footer) */
+.footer-newsletter h2 { 
+    font-size: 1.3rem; 
     font-weight: bold;
-    color: #fff;
-    margin-bottom: 1.5rem;
+    color: #333; 
+    margin-bottom: 1rem;
+    text-align: left; 
 }
 
-
-.newsletterform {
-    display: flex;
-    max-width: 450px;
-    margin: 0 auto 1rem;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.newsletter-form {
+    display: flex;            
+    max-width: 100%; /* กว้างเต็มคอลัมน์ */         
+    margin: 0 0 1rem;          
+    border-radius: 6px;       
+    overflow: hidden;         
+    /* box-shadow: none; */ /* เอาเงาออกก็ได้ */
 }
-.newsletterform input[type="email"] {
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;             
+    padding: 0.75rem 1rem; 
+    border: 1px solid #ccc; 
+    border-right: none;
     font-size: 0.9rem;
-    flex-grow: 1;
-    padding: 0.8rem 1rem;
-    border: none;
-    outline: none;
+    outline: none;            
+    border-radius: 4px 0 0 4px; 
 }
-.newsletterform button {
-    padding: 0.8rem 1rem;
-    background-color: #333;
-    color: #fff;
+
+.newsletter-form button {
+    padding: 0.75rem 1rem;
+    background-color: #333; 
+    color: #fff;           
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    display: flex;
+    display: flex;        
     align-items: center;
+    border-radius: 0 4px 4px 0; 
 }
-.newsletterform button:hover {
-    background-color: #555;
+
+.newsletter-form button:hover {
+    background-color: #555; 
 }
-.newsletterform .arrow-icon {
-    width: 20px;
+
+.newsletter-form .arrow-icon {
+    width: 20px;            
     height: 20px;
 }
 
-
+/* ซ่อน label ที่มี class sr-only (ดีต่อ Accessibility) */
 .sr-only { 
     position: absolute;
     width: 1px;
@@ -57,25 +62,20 @@
     border-width: 0;
 }
 
-
 .terms {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
+    margin-top: 0.5rem;     
+    display: flex;        
+    justify-content: flex-start; /* ชิดซ้าย */
     align-items: center;
+    text-align: left; 
 }
+
 .terms input[type="checkbox"] {
-    margin-right: 0.5rem;
-    accent-color: #333;
+    margin-right: 0.5rem; 
+    accent-color: #333;   
 }
+
 .terms label {
     font-size: 0.8rem;
-    color: #fff;
-}
-
-
-@media (max-width: 767px) {
-    .newsletter h2 {
-        font-size: 1.4rem;
-    }
+    color: #555;         
 }

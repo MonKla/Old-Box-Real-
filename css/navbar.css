@@ -1,88 +1,97 @@
+/* css/navbar.css */
+
 .navbar {
-    border-bottom: 1px solid #eee; /*เส้นคั่นด้านล่าง*/
-    background-color: rgb(255, 83, 83); 
-    height: 80px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    /*อยู่บนสุด ฮ่าฮ๋า*/
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    border-bottom: 1px solid #eee; 
+    background-color: #fff;       
+    height: 80px;                 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    position: sticky;             
+    top: 0;                       
+    z-index: 10;                  
 }
+
 .navbar .container {
     display: flex;
-    align-items: center; /*ทำให้อยู่ตรงกลาง*/
+    align-items: center; /* จัดทุกอย่างกึ่งกลางแนวตั้ง */
     height: 100%;
 }
 
-
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    color: #000000;
-    text-decoration: none; /*เอา่ขีดเส้นใต้ออก เย่😭*/
+    font-size: 1.5rem;   
+    font-weight: bold;   
+    margin: 0;           
+    color: #333;        
+    text-decoration: none; 
+    flex-shrink: 0; /* ไม่ให้โลโก้หดตัว */
 }
 
-
-.com-menu {
-    display: none;
-    flex-grow: 1;
-    text-align: center;
-}
-.com-menu a {
-    margin: 0 0.75rem;
-    text-decoration: none;
-    color: #000000;
-    font-size: 0.9rem;
-    transition: color 0.2 ease;
-}
-.com-menu a:hover {
-    fill: #000;
+.desktop-menu {
+    display: none; /* ซ่อนในมือถือ */
+    flex-grow: 1; /* ทำให้เมนูยืดเต็มพื้นที่ตรงกลาง */
+    text-align: center; /* จัดข้อความลิงก์ให้อยู่ตรงกลาง */
 }
 
+.desktop-menu a {
+    text-decoration: none;      
+    color: #000000;                 
+    font-size: 0.9rem;          
+    transition: color 0.2s ease; 
+    margin: 0 0.75rem; /* ใช้ margin ซ้ายขวาแทน gap */
+}
+
+.desktop-menu a:hover {
+    color: #000;                 
+}
 
 .icons {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-shrink: 0;
-}
-.nav-icons {
-    width: 24px;
-    height: 24px;
-    fill: #555;
-    cursor: pointer;
-    display: block; /*ทำให้ตัวที่อยู่บรรทัดเดียวกันเป็นกล่อง*/
-    transition: fill 0.2s ease;
-}
-.nav-icons:hover {
-    fill: #000;
+    display: flex;        
+    align-items: center;  
+    gap: 0.75rem;       
+    margin-left: auto; /* ดันไอคอนไปทางขวาสุด */
+    flex-shrink: 0; /* ไม่ให้ไอคอนหดตัว */
 }
 
+.nav-icon {
+    width: 24px;          
+    height: 24px;
+    fill: #555;           
+    cursor: pointer;      
+    display: block;       
+    transition: fill 0.2s ease; 
+}
+
+.nav-icon:hover {
+    fill: #000;           
+}
+
+/* .user-icon { */
+    /* display: none; ถ้าอยากซ่อนในมือถือ ให้เปิดอันนี้ */
+/* } */
 
 .mobile-menu-button {
-    display: block;
+    display: block; /* แสดงในมือถือ */
     background: none;
     border: none;
-    font-size: 1.8rem;
-    color: #333;
+    font-size: 1.8rem; 
+    color: #333;     
     cursor: pointer;
-    padding: 0.5rem;
-    margin-left: auto;
+    padding: 0.5rem; 
+    margin-left: 1rem; /* เพิ่มระยะห่างจาก icons เล็กน้อยใน mobile */
+    order: 3; /* (Optional) ทำให้ปุ่ม Hamburger อยู่ขวาสุดเสมอใน flex container */
 }
 
 
+/* --- Responsive Styles --- */
 @media (min-width: 768px) {
     .mobile-menu-button {
         display: none;
     }
 
-    .com-menu {
-        display: block;
+    .desktop-menu {
+        display: block; /* แสดงเมนูคอม */
     }
 
-    .user-icons {
-        display: block;
+    .user-icon {
+         display: block; /* แสดงไอคอน User ใน Desktop */
     }
 }

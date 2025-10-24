@@ -1,30 +1,55 @@
+/* css/global.css */
+
+/* --- ประกาศ Custom Font --- */
 @font-face {
-    font-family: 'Noto sans Thai';
-    src: url(../Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Noto Sans Thai';
+  /* แก้ Path ให้ถูกต้อง */
+  src: url('../Font/Noto_Sans_Thai/static/NotoSansThai-Regular.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Noto Sans Thai';
-    src: url(../Font/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\,wght.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Noto Sans Thai';
+  /* แก้ Path ให้ถูกต้อง */
+  src: url('../Font/Noto_Sans_Thai/static/NotoSansThai-Bold.ttf') format('truetype'); 
+  font-weight: bold; 
+  font-style: normal;
 }
 
+/* --- การตั้งค่าพื้นฐาน --- */
 body {
-    font-family: 'Noto Sans Thai';
+    font-family: 'Noto Sans Thai', sans-serif; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: rgb(235, 235, 235);
-    color: black;
+    background-color: #f8f7f3; /* สีพื้นหลังครีม */
+    color: #333; 
 }
 
+/* --- Container สำหรับจัดกลาง --- */
 .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /*rem คือหน่วยที่บอกเป็นเท่าๆอ่ะไม่ใช่แบบpx ที่fixed มาเลย*/
+    padding-left: 1rem;
     padding-right: 1rem;
+}
+
+/* --- Global Link Styles --- */
+a {
+    color: inherit; /* ให้ลิงก์ใช้สีตัวหนังสือปกติของ parent */
+    text-decoration: none; /* เอาเส้นใต้ออก */
+    transition: color 0.2s ease; 
+}
+
+/* กำหนดสไตล์เมื่อลิงก์ถูกเยี่ยมชมแล้ว (visited) */
+a:visited {
+    color: inherit; /* ใช้สีเดิม ไม่ต้องเปลี่ยนเป็นสีม่วง */
+}
+
+/* กำหนดสไตล์ตอนเอาเมาส์ชี้ */
+a:hover {
+    color: #000; /* เปลี่ยนเป็นสีดำ */
+    /* text-decoration: underline; */ /* เอาเส้นใต้ออก */
 }
