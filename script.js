@@ -40,7 +40,7 @@ function createProductCard(product) {
 
 //ดึงจากApi
 console.log('Fetching products...');
-fetch('https://fakestoreapi.com/products')
+fetch('https://fakestoreapi.com/products') //ไอ้นี้แหละตัวขอข้อมูล
   .then(response => {
     console.log('Received response:', response);
     if (!response.ok) {
@@ -73,7 +73,7 @@ fetch('https://fakestoreapi.com/products')
     });
     console.log('--- Finished processing products ---');
   })
-  
+  //ในcaseที่มันerror
   .catch(error => {
     console.error('!!! Error during fetch or processing:', error);
     if (productListContainer) {
